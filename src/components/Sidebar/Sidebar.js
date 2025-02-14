@@ -26,13 +26,14 @@ const Sidebar = () => {
 		</div>
         <div className='bottom'>
 			<div className='bottom-item recent-entry'>
-				<img  src={assests.qsn} alt='Help'/>
+				<img src={assests.qsn} alt='Help'/>
 				{extended? <p>Help</p> : null}
 			</div>
 			<div className='bottom-item recent-entry'>
 				<img  src={assests.hist} alt='History'/>
 				{extended? <p>Activity</p> : null}
-			</div><div className='bottom-item recent-entry'>
+			</div>
+			<div className='bottom-item recent-entry'>
 				<img  src={assests.setting} alt='Setting'/>
 				{extended? <p>Setting</p> : null}
 			</div>

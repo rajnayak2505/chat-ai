@@ -1,0 +1,47 @@
+.login{
+    min-height: 100vh;
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    gap: 50px;
+    padding: 15px;
+}
+.img-wrap img{
+    height: 500px;
+    border-radius: 40px;
+}
+.auth-wrap h1{
+    font-size: 107px;
+    font-weight: 400;
+    background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.auth-wrap h2{
+    font-size: 28px;
+    color: rgb(27, 28, 29);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.auth-wrap h3{
+    font-size: 17px;
+    color: rgb(27, 28, 29);
+    font-weight: 300;
+}
+.auth-wrap button{
+    background-color: rgb(211, 227, 253);
+    font-size: 16px;
+    color: rgb(4, 30, 73);
+    border-radius: 16px;
+    width: 90px;
+    height: 56px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px, rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
+}
+.auth-wrap button:hover{
+    background-color: rgb(192, 207, 233);
+}

@@ -1,17 +1,39 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Main.css"
 import { assests } from '../../assests/assests'
 
 const Main = () => {
+    const [signOut, setSignOut] = useState(false)
+    const [name, setName] = useState(localStorage.getItem("name"))
+    const [photo, setPhoto] = useState(localStorage.getItem("name"))
+
+    const handleLogout = () => {
+        localStorage.clear()
+        window.location.reload()
+    }
+    useEffect(() => {
+        setName(localStorage.getItem("name"));
+        setPhoto(localStorage.getItem("photo"));
+    });
+
+    const showPanel = () => {
+
+    }
+
   return (
     <div className='main'>
         <div className='nav'>
             <p>Gemini</p>
-            <span className='profile'>RN</span>
+            <img onClick={() => setSignOut(toggle => !toggle)} className='profile' src={photo} alt='profile'/>
+            {signOut?<div className='logout-wrap'>
+                <img src='https://cdn-icons-png.flaticon.com/512/25/25376.png'/>
+                <button onClick={handleLogout} className=''>Sign out</button>
+            </div>
+            :null}
         </div>
         <div className='main-container'>
             <div className='greet'>
-                <p><span>Hello,Rajesh</span></p>
+                <p><span>Hello,{name}</span></p>
                 <p>How can I help you today?</p>
             </div>
             <div className='cards'>
