@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/chat-ai/static/css/main.cdbc3f42.css",
+    "main.js": "/chat-ai/static/js/main.14698dae.js",
+    "static/js/488.cdd1eb7e.chunk.js": "/chat-ai/static/js/488.cdd1eb7e.chunk.js",
+    "static/media/gallery.png": "/chat-ai/static/media/gallery.1da1416be560b7741007.png",
+    "static/media/left-text.jpg": "/chat-ai/static/media/left-text.04bd9eb43f51713b9529.jpg",
+    "index.html": "/chat-ai/index.html",
+    "main.cdbc3f42.css.map": "/chat-ai/static/css/main.cdbc3f42.css.map",
+    "main.14698dae.js.map": "/chat-ai/static/js/main.14698dae.js.map",
+    "488.cdd1eb7e.chunk.js.map": "/chat-ai/static/js/488.cdd1eb7e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cdbc3f42.css",
+    "static/js/main.14698dae.js"
+  ]
+}
