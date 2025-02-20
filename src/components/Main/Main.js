@@ -14,7 +14,7 @@ const Main = () => {
     useEffect(() => {
         setName(localStorage.getItem("name"));
         setPhoto(localStorage.getItem("photo"));
-    });
+    },[]);
 
   return (
     <>
@@ -24,8 +24,8 @@ const Main = () => {
                 <p>ChatAI</p>
                 <img onClick={() => setSignOutBtn(toggle => !toggle)} className='profile' src={photo} alt='profile'/>
                 {signOutBtn?<div className='logout-wrap'>
-                    <img onClick={() => setSignOutBtn(toggle => !toggle)}  className='closeicon' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9dX939qnqze6Uwmku0_fw8__CpyxW501RuA&s'/>
-                    <img className='logouticon' src='https://cdn-icons-png.flaticon.com/512/25/25376.png'/>
+                    <img onClick={() => setSignOutBtn(toggle => !toggle)} alt='menu' className='closeicon' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9dX939qnqze6Uwmku0_fw8__CpyxW501RuA&s'/>
+                    <img className='logouticon' alt='logout' src='https://cdn-icons-png.flaticon.com/512/25/25376.png'/>
                     <button onClick={handleSignOut} className=''>Sign out</button>
                 </div>
                 :null}

@@ -8,7 +8,6 @@ import Slideshow from '../Slideshow/Slideshow'
 
 const Login = () => {
     const [value, setValue] = useState('');
-    const [laoding, setLaoding] = useState('');
     
     const handleLoginCLick = () => {
         signInWithPopup(auth, provider).then((data) => {
@@ -23,7 +22,7 @@ const Login = () => {
 
     useEffect(() => {
         setValue(localStorage.getItem("email"))
-    });
+    },[]);
 
 
     const DisableBtn = () => {
