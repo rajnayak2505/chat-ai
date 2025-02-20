@@ -38,15 +38,28 @@
     cursor: pointer;
     font-size: 17px;
     margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4px;
+    margin-left: 30px;
 }
 .logout-wrap button:hover{
     text-decoration: underline;
 }
-.logout-wrap img {
+.logout-wrap .logouticon {
     position: absolute;
-    width: 20px;
+    width: 18px;
     top: 17px;
     left: 14px;
+}
+.logout-wrap .closeicon {
+    position: absolute;
+    width: 34px;
+    top: -42px;
+    left: 87px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 .main-container{
     max-width: 900px;
@@ -132,4 +145,10 @@
     margin: 15px auto;
     text-align: center;
     font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+    .main .greet{
+        font-size: 40px;
+    }
 }

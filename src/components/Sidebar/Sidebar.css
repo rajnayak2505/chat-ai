@@ -54,3 +54,24 @@
 .sidebar .bottom-item{
     padding-right: 10px;
 }
+
+@media screen and (max-width: 600px) {
+    .sidebar{
+        padding: 25px 10px;
+    }   
+    .sidebar .new-chat{
+        padding: 5px 10px;
+    }
+    .main .cards ul li{
+        height: 120px;
+    }
+    .search-box img{
+        width: 20px;
+    }
+    .search-box div{
+        gap: 7px;
+    }
+    .sidebar img{
+        width: 18px;
+    }
+}

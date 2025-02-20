@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Login from './components/Auth/Login'
 
-const App = () => {
+const App = (props) => {
   return (
     <>
     <Login/>

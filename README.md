@@ -6,6 +6,7 @@
     - Main Container
     - Login UI
         - Google Provider auth
+    - Image Slide Show Login page
 
 
 

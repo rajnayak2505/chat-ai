@@ -7,6 +7,9 @@
     gap: 50px;
     padding: 15px;
 }
+.slide-container{
+    width: 550px;
+}
 .img-wrap img{
     height: 500px;
     border-radius: 40px;
@@ -31,7 +34,7 @@
 }
 .auth-wrap button{
     background-color: rgb(211, 227, 253);
-    font-size: 16px;
+    font-size: 18px;
     color: rgb(4, 30, 73);
     border-radius: 16px;
     width: 90px;
@@ -41,7 +44,39 @@
     cursor: pointer;
     margin-top: 20px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px, rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .auth-wrap button:hover{
     background-color: rgb(192, 207, 233);
+}
+.auth-wrap button .btnloader{
+    width: 20px;
+    margin-left: 6px;
+}
+
+.disable{
+    color: rgba(16, 16, 16, 0.3)!important;
+    cursor:default!important;
+}
+.disable:hover{
+    background-color: rgb(211, 227, 253)!important;
+}
+.default-nav{
+    display: none !important;
+}
+
+@media screen and (max-width: 768px){
+    .login{
+        flex-direction: column;
+    }
+    .img-wrap img{
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+    .auth-wrap button{
+        margin: 40px auto 0;
+    }
 }
