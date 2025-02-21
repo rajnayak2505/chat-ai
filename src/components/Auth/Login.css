@@ -80,3 +80,19 @@
         margin: 40px auto 0;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .auth-wrap h1{
+        font-size: 90px;
+    }
+    .slide-container{
+      width: 350px;
+    }
+    .auth-wrap button {
+        margin: 20px auto 0;
+    }
+    .auth-wrap button{
+        width: 110px;
+        height: 66px;
+    }
+}

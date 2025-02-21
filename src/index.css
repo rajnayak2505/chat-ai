@@ -34,3 +34,10 @@
     margin-left: 60px;
   }
 }
+
+@media screen and (max-width: 500px) {
+  #root > div > div.img-wrap > div > div > div > div > div > div:nth-child(1) > div > div{
+    background-size: 350px 350px !important;
+    height: 350px !important;
+  }
+}
