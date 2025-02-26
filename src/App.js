@@ -1,10 +1,13 @@
 import React from 'react'
 import Login from './components/Auth/Login'
+import ContextProvider from './context/Context'
 
 const App = (props) => {
   return (
     <>
-    <Login/>
+    <ContextProvider>
+      <Login/>
+    </ContextProvider>
     </>
   )
 }
