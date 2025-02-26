@@ -4,9 +4,8 @@ import {
     HarmCategory,
     HarmBlockThreshold,
   } from "@google/generative-ai";
-import { GEMINIAI_KEY } from "./constants";
   
-  const apiKey = GEMINIAI_KEY
+  const apiKey = "AIzaSyBX7f8i8lHPrlli9PRGxIaAV5hFNFzHv6g"
   const genAI = new GoogleGenerativeAI(apiKey);
   
   const model = genAI.getGenerativeModel({
