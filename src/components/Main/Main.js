@@ -9,7 +9,6 @@ const Main = () => {
         input,
         setInput,
         recentPrompt,
-        setRecentPrompt,
         showResult,
         resultData,
         loading,
