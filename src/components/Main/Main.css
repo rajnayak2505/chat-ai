@@ -213,6 +213,39 @@
     border-radius: 10px;
     background-color: #f0f4f9;
 }
+.content{
+    position: relative;
+
+}
+.content .bottomcopytxt{
+    color: #595b5d;
+    position: absolute;
+    right: 20px;
+    bottom: 10px
+}
+.text-copy{
+    display: block;
+    text-align: center;
+    background: #cde9cd;
+    width: 106px;
+    margin: 10px auto;
+    padding: 6px;
+    color: #595b5d;
+}
+.content .bottomcopybtn{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 23px;
+    cursor: pointer;
+}
+.model select{
+    border: none;
+    outline: none;
+    font-size: 17px;
+    font-weight: 500;
+    color: #585858;
+}
 
 @media screen and (max-width: 768px) {
     .main .greet{

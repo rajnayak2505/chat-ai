@@ -17,15 +17,23 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
   };
   
   async function runChat(prompt) {
-    const chatSession = model.startChat({
-      generationConfig,
-      history: [
-      ],
-    });
-  
-    const result = await chatSession.sendMessage(prompt);
-    console.log(result.response.text());
-    return result.response.text();
+    const xhr = new XMLHttpRequest();
+    try{
+      const chatSession = model.startChat({
+        generationConfig,
+        history: [
+        ],
+      });
+    
+      const result = await chatSession.sendMessage(prompt);
+      // console.log(result.response.text());
+      return result.response.text();
+    }catch(error){
+      if (xhr.status === 429) {
+        console.log(xhr.status)
+        console.warn(`Too Many Requests`);
+      }
+    }
   }
   
   export default runChat;

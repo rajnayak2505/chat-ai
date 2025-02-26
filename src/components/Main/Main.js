@@ -17,7 +17,9 @@ const Main = () => {
     const [signOutBtn, setSignOutBtn] = useState(false)
     const [name, setName] = useState(localStorage.getItem("name"))
     const [photo, setPhoto] = useState(localStorage.getItem("name"))
-
+    const [listItem, setListItem] = useState("")
+    const [copySuccess, setCopySuccess] = useState('');
+    
     const handleSignOut = () => {
         localStorage.clear()
         window.location.reload()
@@ -27,13 +29,26 @@ const Main = () => {
         setPhoto(localStorage.getItem("photo"));
     },[]);
 
-    const [listItem, setListItem] = useState("")
 
     const listClick = (e) => {
         setListItem(e.target.textContent)
         setInput(e.target.textContent)
         onSent();
     }
+
+    // Function to copy text to clipboard
+    const copyToClipboard = async (text) => {
+        try {
+            await navigator.clipboard.writeText(text);
+            setCopySuccess('Copied!');
+        } catch (err) {
+            setCopySuccess('Failed to copy!');
+        }
+        setTimeout(function() {
+            setCopySuccess(copySuccess)
+            setCopySuccess(copySuccess)
+        },1500)
+    };
 
   return (
     <>
@@ -91,12 +106,16 @@ const Main = () => {
                         <hr/>
                     </div>
                     :
-                    <p dangerouslySetInnerHTML={{__html:resultData}}></p>
+                    <div className='content'>
+                        <p id='textToCopy' dangerouslySetInnerHTML={{__html:resultData}}></p>
+                        <img className='bottomcopybtn' onClick={() => copyToClipboard(document.getElementById('textToCopy').textContent)} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ6VNA77vYylob7xMuLLkVWIwIoOFm02A72g&s" alt='copyText'/>
+                    </div>
                     }
                 </div>
                 </div>
                 }
                 <div className='main-bottom'>
+                    {copySuccess && <span className='text-copy'>{copySuccess}</span>}
                     <div className='search-box'>
                         <input onChange={(e) => setInput(e.target.value)} value={input} type='text' placeholder='Ask ChatAI'/>
                         <div>
